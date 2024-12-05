@@ -1,0 +1,8 @@
+# EP-390 Final Project Developer Manual
+
+1. This is in progress but essentially this patch uses MediaPipe to capture 7 hand gestures: Closed_Fist, Open_Palm, Pointing_Up, Thumb_Down, Thumb_Up, Victory (or peace sign), ILoveYou (like a rock and roll hand sign but with your thumb out, palm facing the camera).
+2. I chose to use the camera for this project and ran into a slew of problems originally BECAUSE of the camera I bought (IMX708) when trying to run all of this on my Jetson Orin Nano. There were issues with the camera not being natively supported and needed to manually build the kernel for Jetpack 6.0 on the device that just was not working. I wanted to use camera because I figured it could capture a lot of things hands free and I want it to be incredibly easy to START engaging with the instrument from the viewer.
+3. Currently the data processing is just toggles for the instruments playing but there is recognition of distance to camera (albeit buggy) and x/y coordinates in the frame
+4. Moving forward I want to add more control over the pitches and make the instrument more atonal to have performers feel more fluidity. I also intend to get rid of the horrid clicking between instrument selection. 
+5. There was a lot that was unsuccesful in my process with the nano and then with openFrameworks as a lot of processes either just simply did not work or were too difficult to harness in a more precise and "realtime" focused manner.
+6. All that this project uses for now is Max 9, rnbo, and this patch/html/js scipts I found online: https://github.com/lysdexic-audio/jweb-hands-gesture-recognizer/tree/main?tab=readme-ov-file 
